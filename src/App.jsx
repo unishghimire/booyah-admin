@@ -10,6 +10,7 @@ import PromoCodes from './pages/PromoCodes';
 import Settings from './pages/Settings';
 import PaymentRequests from './pages/PaymentRequests';
 import Bootstrap from './pages/Bootstrap';
+import Logs from './pages/Logs';
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
 import { Toaster } from 'react-hot-toast';
@@ -57,7 +58,7 @@ export default function App() {
 
   if (checking) return (
     <div className="flex h-screen items-center justify-center bg-[#060912] flex-col gap-4">
-      <div className="h-10 w-10 rounded-full border-4 border-[#FF6B00]/20 border-t-[#FF6B00] animate-spin" />
+      <div className="h-10 w-10 rounded-full border-4 border-[#7C3AED]/20 border-t-[#7C3AED] animate-spin" />
       <p className="font-orbitron text-[10px] text-gray-600 tracking-widest">VERIFYING CREDENTIALS...</p>
     </div>
   );
@@ -88,6 +89,7 @@ export default function App() {
             <Route path="/settings"      element={<Settings />} />
             <Route path="/payment-requests" element={<PaymentRequests />} />
             <Route path="/bootstrap"     element={<Bootstrap />} />
+            <Route path="/logs"          element={<Logs />} />
             <Route path="*"              element={<Navigate to="/dashboard" replace />} />
           </Routes>
         </main>
